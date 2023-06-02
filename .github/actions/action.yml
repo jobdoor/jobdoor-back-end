@@ -1,0 +1,18 @@
+name: "Test workflow"
+description: "This is a test action to learn"
+inputs:
+  file-path:
+    description: "Path to test script"
+    required: true
+    default: "../../src/main.ts"
+  second-arg:
+    description: "Favorite number"
+    required: true
+    default: "10"
+outputs:
+  result-file:
+    value: "Test result"
+    description: "Path to file"
+  result-second-arg:
+    value: "Test favorite number"
+    desciption: "Favorite number asked"
