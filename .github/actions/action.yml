@@ -13,6 +13,3 @@ outputs:
   result-file:
     value: "Test result"
     description: "Path to file"
-  result-second-arg:
-    value: "Test favorite number"
-    desciption: "Favorite number asked"
