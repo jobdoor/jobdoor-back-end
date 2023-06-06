@@ -2,21 +2,21 @@ name: learn-github-actions
 run-name: ${{ github.actor }} is learning GitHub Actions
 on: [push]
 jobs:
-    first-job:
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v3
-            - uses: actions/setup-node@v3
-              with:
-                node-version: '14'
-            - run: node -v
-    second-job:
-        runs-on: ubuntu-latest
-        steps:
-            - run: echo 'this is a test'
-            - run: printenv
-            - run: ip a
-            - run: curl https://www.google.com
+    # first-job:
+    #     runs-on: ubuntu-latest
+    #     steps:
+    #         - uses: actions/checkout@v3
+    #         - uses: actions/setup-node@v3
+    #           with:
+    #             node-version: '14'
+    #         - run: node -v
+    # second-job:
+    #     runs-on: ubuntu-latest
+    #     steps:
+    #         - run: echo 'this is a test'
+    #         - run: printenv
+    #         - run: ip a
+    #         - run: curl https://www.google.com
     third-job:
       runs-on: ubuntu-latest
       steps:
