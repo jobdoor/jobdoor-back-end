@@ -1,26 +1,26 @@
-# name: Test-Workflow
-# author: Juan Campos
-# description: This is a test action to learn
-# inputs:
-#   file-path:
-#     description: "Path to test script"
-#     required: true
-#     default: "../../src/main.ts"
-#   second-arg:
-#     description: "Favorite number"
-#     required: true
-#     default: "10"
-# outputs:
-#   result-file:
-#     value: "Test result"
-#     description: "Path to file"
-name: "Example"
-description: "Receives file and generates output"
+name: Test-Workflow
+author: Juan Campos
+description: This is a test action to learn
 inputs:
-  file-path: # id of input
-    description: "Path to test script"
+  who-to-greet:
+    description: "Person to greet"
     required: true
-    default: "test-file.js"
+    default: "World"
+  favorite-number:
+    description: "Favorite number"
+    required: true
+    default: "10"
 outputs:
-  results-file: # id of output
-    description: "Path to results file"
+  result-file:
+    value: "Test result"
+    description: "Path to file"
+  result-second-arg: 
+    value: ${{ inputs.second-arg }}
+    description: "Fav num"
+runs:
+  using: composite
+  steps:
+    - run: echo Hello ${{ inputs.who-to-greet }}.
+      shell: bash
+    - run: echo Your favorite number is ${{ inputs.favorite-number }}
+      shell: bash
