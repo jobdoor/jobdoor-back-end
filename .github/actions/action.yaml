@@ -1,15 +1,26 @@
-name: "Test workflow"
-description: "This is a test action to learn"
+# name: Test-Workflow
+# author: Juan Campos
+# description: This is a test action to learn
+# inputs:
+#   file-path:
+#     description: "Path to test script"
+#     required: true
+#     default: "../../src/main.ts"
+#   second-arg:
+#     description: "Favorite number"
+#     required: true
+#     default: "10"
+# outputs:
+#   result-file:
+#     value: "Test result"
+#     description: "Path to file"
+name: "Example"
+description: "Receives file and generates output"
 inputs:
-  file-path:
+  file-path: # id of input
     description: "Path to test script"
     required: true
-    default: "../../src/main.ts"
-  second-arg:
-    description: "Favorite number"
-    required: true
-    default: "10"
+    default: "test-file.js"
 outputs:
-  result-file:
-    value: "Test result"
-    description: "Path to file"
+  results-file: # id of output
+    description: "Path to results file"
